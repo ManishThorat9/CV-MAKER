@@ -1,0 +1,21 @@
+ /* body{ 
+ background-color:red;
+} */
+
+/* #CV-TEMPLATE{
+text-decoration-color: aqua;
+
+
+}  */
+.myimg{
+
+     border: 1px solid rgb(30, 226, 233);
+     width: 200px;
+     border-radius:50%;
+}
+.background{
+background-color:rgb(99, 232, 241);
+border: 1px solid rgb(6, 8, 1);
+font-family: Luxurious Roman;
+
+}

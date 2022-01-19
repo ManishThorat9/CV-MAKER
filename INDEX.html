@@ -1,0 +1,293 @@
+<html lang="en">
+    <head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+ rel="stylesheet"
+  integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+ crossorigin="anonymous" 
+/>
+<link rel="stylesheet" href="style.css">
+<title>Resume maker</title>
+ </head>
+<body>
+<!--here goes html code -->
+<div class="container" id="cv-form">
+     <h1 class="text-center my-5" >Resume Generator</h1>
+<p Class="text-center ">arman-manish CV maker</p>
+ <div class="row">
+
+    <div class="col-md-6">
+<h3>Personal Information</h3>
+
+
+<div class="form-group mt-2 ">
+
+    <label for="nameField">Your Name</label>
+    <input type="text" id= "nameField" placeholder="ex--manish.s.thorat"class="form-control">
+
+
+</div>
+
+<div class="form-group mt-2">
+
+    <label for="contactField">Your Contact Number</label>
+    <input type="text" id= "contactField" placeholder="ex--9579******"class="form-control">
+
+
+</div>
+
+
+
+<div class="form-group mt-2 ">
+
+    <label for="emailField">Your email <E-mail></E-mail></label>
+    <input type="text" id= "emailField" placeholder="ex--manish@gmail.com"class="form-control">
+
+
+</div>
+
+
+<div class="form-group mt-2">
+
+    <label for="addressField">Your Address</label>
+    <textarea id= "addressField" 
+    placeholder="Panvel Expressway, Kamothe, Navi Mumbai. Pin 410 209."
+    class="form-control" 
+    rows="5"></textarea>
+</div>
+
+
+
+<p class ="text-secondary my-3">Important link</p>
+<div class="form-group mt-2">
+
+    <label for="fbField">facebook</label>
+    <input type="text" 
+    id="fbField"
+    placeholder="enter here"
+    class="form-control"
+    />
+</div>
+
+<div class="form-group mt-2">
+
+    <label for="instaField">Instagram</label>
+    <input type="text" 
+    id="instaField" 
+    placeholder="enter here"
+    class="form-control"
+    />
+</div>
+<div class="form-group mt-2">
+
+    <label for="linkedField">linkedIn</label>
+    <input type="text" 
+    id="linkedField" 
+    placeholder="enter here"
+    class="form-control"
+    />
+</div>
+ </div>
+    <div class="col-md-6">
+<h3>Professional Information</h3>
+<div class="form-group mt-2">
+
+    <label for="">Objective</label>
+    <textarea id="objectiveField"
+    placeholder="ex--'I m looking for an internship where I can utilize my experience with natural language processing and building web apps for non-technical users to further the mission of Coursera in democratizing education across the world.
+
+    Recent graduate with an MS in Computer Science looking to leverage my experience building responsive and scalable web apps to solve interesting problems that delight end-users.'"
+    class="form-control " 
+    rows="3">
+</textarea>
+</div>
+<div class="form-group mt-2" id="we">
+    <label for="">Work Experience</label>
+    <textarea
+    rows="3" 
+    placeholder="ex--Embedded Systems Computer Engineer
+    December 2016 July 2019
+    Artificial Mobility Systems & Design, Cincinnati, OH"
+    class="form-control weField" 
+    >
+</textarea>
+<!--new text area-->
+
+<div class="container text-center mt-3" id="weAddButton">
+
+<button onclick="addNewWEField()" class="btn btn-primary btn-sm">
+    
+    Add
+</button>
+
+</div>
+
+
+</div>
+
+<div class="form-group mt-2" id="aq">
+
+    <label for="">Academic Qualifications</label>
+    <textarea 
+    rows="3"
+    placeholder="ex--'Bachelor of Science in Computer Engineering Technology
+     Old Dominion University, Norfolk, VA
+    Graduation: 2014'" 
+    class="form-control eqField" 
+  >
+</textarea>
+
+<div class="container text-center mt-3"id="aqAddButton">
+
+<button onclick="addNewAQField()" class="btn btn-primary btn-sm">
+    Add
+</button>
+
+</div>
+
+
+</div>
+
+
+    </div>
+<div class="container text-center mt-4" >
+     <button onclick="generateCV()" class="btn btn-primary btn-lg">Generate cv</button>
+
+</div>
+
+
+
+</div>
+</div>
+
+<br>
+<br>
+<!-- cv template-->
+<div class="container" id="cv-template">
+
+<div class="row">
+<div class="col-md-4 text-center py-5 background">
+<!-- first col  -->
+<img src="https://th.bing.com/th/id/OIP.EWDObedOTelsQidns1jowQHaGz?pid=ImgDet&rs=1"
+alt=""
+class="img-fluid myimg" />
+
+
+<div class="container">
+
+<p id ="nameT1" >White House</p>
+ <p id="contactT">1-202-456-1414</p>   
+<p id="emailT">WhiteHouse@gmail.com</p>
+<p id="addressT">1600 Pennsylvania Ave., NW Washington, DC 20500</p>
+
+<hr />
+<p><a id="fbT" href="#1">https://www.usa.gov/federal-agencies/white-house</a></p>
+<hr />
+<p><a id="instaT" href="#1">https://www.usa.gov/federal-agencies/white-house</a></p>
+
+<hr />
+<p><a id="linkedT" href="#1">https://www.usa.gov/federal-agencies/white-house</a></p>
+
+</div>
+
+</div>
+</div>
+<div class="col-md-8 py-5 ">
+    <!-- second col -->
+<h1 id="nameT2" class="text-center" style="font-weight: 800;">  Thorat Manish Santosh </h1>
+
+
+<!-- OBJECTIVE CARD -->
+<div class="card mt-4">
+    <div class="card-header  background">
+    <h3>OBJECTIVE</h3></div>
+    <div class="card-body">
+
+        <p id="objectiveT">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo voluptas consequuntur, 
+            atque, quae eum velit, sint ratione culpa aliquam distinctio voluptatum quasi hic sunt nostrum cum.
+             Qui aut dolores itaque, tempora provident odit, porro, sit laborum accusantium pariatur necessitatibus 
+             tempore iure eveniet ipsa tenetur distinctio enim et veniam eaque? Vero!</p>
+    </div>
+
+</div>
+
+
+<!-- WORK EXPERIENCE -->
+<div class="card mt-4">
+    <div class="card-header  background">
+    <h3>WORK EXPERIENCE</h3></div>
+    <div class="card-body">
+        <ul id="weT" >
+    <li>
+i work with google.
+i work with nasa.
+
+
+    </li>
+    <li>
+        i work with google.
+        i work with nasa.
+        
+        
+            </li>
+            <li> i work with google.
+ i work with nasa.
+</li></ul>                    
+    </div>
+
+</div>
+
+<!-- Academic Qualifications -->
+<div class="card mt-4">
+    <div class="card-header  background">
+    <h3>Academic Qualifications</h3></div>
+    <div class="card-body">
+        <ul id="aqT">
+    <li>
+i work with google.
+i work with nasa.
+
+
+    </li>
+    <li>
+        i work with google.
+        i work with nasa.
+        
+        
+            </li>
+            <li> i work with google.
+ i work with nasa.
+</li></ul>                    
+    </div>
+
+</div>
+
+
+</div>
+<div class="container mt-3 text-center">
+
+
+<button onclick="printCV()"  class="btn background"> print CV</button>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
+crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
